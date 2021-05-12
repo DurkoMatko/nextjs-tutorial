@@ -4,6 +4,7 @@ import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
+import CreatePost from "../components/CreatePost";
 
 // this runs at a build time in production (will be ran just once)
 export async function getStaticProps() {
@@ -42,6 +43,8 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
+
+      <CreatePost />
     </Layout>
   );
 }
